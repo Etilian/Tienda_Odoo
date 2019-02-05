@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+<data>
+        <act_window id="candeat_cliente_action" name="cliente"
+                     res_model="candeat.cliente" />
+
+
+        <record id="candeat_cliente_view_tree" model="ir.ui.view">
+            <field name="name">Lista cliente</field>
+            <field name="model">candeat.cliente</field>
+            <field name="arch" type="xml">
+
+                <tree>
+                    <field name="nombre" />
+                    <field name="apellidos" />
+                    <field name="telefono" />
+                    <field name="direccion" />
+                    <field name="restaurante" />
+                    <field name="comida" />
+                </tree>
+            </field>
+        </record>
+
+
+
+        <record id="candeat_cliente_view_search" model="ir.ui.view">
+            <field name="name">Busqueda cliente</field>
+            <field name="model">candeat.cliente</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="nombre" />
+                    <field name="apellidos" />
+                    <field name="telefono" />
+                    <field name="direccion" />
+                    <field name="restaurante" />
+                    <field name="comida" />
+                </search>
+            </field>
+        </record>
+        <menuitem name="candeat" id="menu_candeat" sequence="10" />
+        <menuitem name="Inicio" id="menu_inicio" parent="menu_candeat" sequence="10"/>
+        <menuitem name="Cliente" id="menu_cliente" action="candeat_cliente_action" parent="menu_inicio" sequence="1"/>
+
+    </data>
+
+</odoo>

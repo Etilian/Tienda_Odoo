@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+<data>
+        <act_window id="candeat_comida_action" name="comida"
+                     res_model="candeat.comida" />
+
+
+        <record id="candeat_comida_view_tree" model="ir.ui.view">
+            <field name="name">Lista comida</field>
+            <field name="model">candeat.comida</field>
+            <field name="arch" type="xml">
+
+                <tree>
+                    <field name="nombre" />
+                    <field name="codigoPlato" />
+                    <!--<field name="precio" />-->
+                </tree>
+            </field>
+        </record>
+
+
+
+        <record id="candeat_comida_view_search" model="ir.ui.view">
+            <field name="name">Busqueda comida</field>
+            <field name="model">candeat.comida</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="nombre" />
+                    <field name="codigoPlato" />
+                    <!--<field name="precio" />-->
+                </search>
+            </field>
+        </record>
+        <menuitem name="Comida" id="menu_comida" action="candeat_comida_action" parent="menu_inicio" sequence="3"/>
+
+    </data>
+
+</odoo>

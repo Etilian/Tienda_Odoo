@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+<data>
+        <act_window id="candeat_restaurante_action" name="restaurante"
+                     res_model="candeat.restaurante" />
+
+
+        <record id="candeat_restaurante_view_tree" model="ir.ui.view">
+            <field name="name">Lista restaurante</field>
+            <field name="model">candeat.restaurante</field>
+            <field name="arch" type="xml">
+
+                <tree>
+                    <field name="nombre" />
+                    <field name="direccion" />
+                    <field name="telefono" />
+                    <field name="comida" />
+                </tree>
+            </field>
+        </record>
+
+
+
+        <record id="candeat_restaurante_view_search" model="ir.ui.view">
+            <field name="name">Busqueda restaurante</field>
+            <field name="model">candeat.restaurante</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="nombre" />
+                    <field name="direccion" />
+                    <field name="telefono" />
+                    <field name="comida" />
+                </search>
+            </field>
+        </record>
+        <menuitem name="Restaurante" id="menu_restaurante" action="candeat_restaurante_action" parent="menu_inicio" sequence="2"/>
+
+    </data>
+
+</odoo>
